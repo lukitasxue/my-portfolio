@@ -15,6 +15,17 @@
       This project started with a simple idea: what if I could log my daily habits and predict how they affect my mood? What began as a curious experiment became one of my most complete personal builds. It combines machine learning, backend + frontend integration, and user-centered design (with a sprinkle of chaotic debugging, of course).
     </p>
 
+	<p class="mb-6 text-gray-300">
+	Curious to see how it works?  
+	<a 
+		href="https://moodpredictorapp.netlify.app" 
+		target="_blank"
+		class="text-purple-400 underline hover:text-purple-300 transition">
+		→ Test the App Live
+	</a>
+	</p>
+
+
     <img :src="moodShowcase" alt="Mood Over Time Chart" class="rounded-lg mb-6 shadow" />
 		<section class="mb-12">
 			<h2 class="text-2xl font-semibold mb-2">Tech Stack (a.k.a. How I Pieced It All Together)</h2>
