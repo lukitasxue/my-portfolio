@@ -2,6 +2,15 @@
 
 export const projects = [
 	{
+		id: "skedy",
+		title: "Skedy — AI WhatsApp Agent for Service Businesses",
+		shortTitle: "Skedy",
+		image: "/blog/skedy/skedy-system-architecture.png",
+		description: "Co-founded an AI customer-service platform for service businesses. Built the RAG pipeline, conversational state engine, and WhatsApp Business API integration.",
+		showcase: true
+	},
+
+	{
 		id: "mood-predictor",
 		title: "Mood Predictor App",
 		shortTitle: "Mood Predictor",

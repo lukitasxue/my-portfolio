@@ -6,6 +6,7 @@ import router from './router'
 import BlogPostMoodPredictor from './components/BlogPostMoodPredictor.vue'
 import BlogPostLinearRegression from './components/BlogPostLinearRegression.vue'
 import BlogPostParkLenseDDSC from './components/BlogPostParkLenseDDSC.vue'
+import BlogPostSkedy from './components/BlogPostSkedy.vue'
 
 
 const app = createApp(App)
@@ -14,5 +15,6 @@ app.use(MotionPlugin)
 app.component('BlogPostMoodPredictor', BlogPostMoodPredictor)
 app.component('BlogPostLinearRegression', BlogPostLinearRegression)
 app.component('BlogPostParkLenseDDSC', BlogPostParkLenseDDSC)
+app.component('BlogPostSkedy', BlogPostSkedy)
 app.mount('#app')
 
