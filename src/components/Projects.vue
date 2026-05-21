@@ -1,6 +1,6 @@
 <template>
   <section id="projects" class="projects-section h-full overflow-hidden px-4 sm:px-6 flex flex-col justify-center" :style="{ backgroundColor: 'var(--bg-color)', color: 'var(--text-color)' }">
-    <h2 class="projects-title text-3xl font-bold text-center">Projects</h2>
+    <h2 class="projects-title text-3xl font-bold text-center">Some Projects</h2>
 
     <!-- Responsive 2-column grid -->
     <div class="projects-grid grid gap-4 max-w-6xl mx-auto w-full">
