@@ -35,11 +35,19 @@
     </header>
 
     <!-- Main Homepage Sections (only shown when NOT on /projects or blog page) -->
-    <div v-if="route.path === '/'" class="font-sans">
-      <Hero :projectsSectionRef="projectsSectionRef" />
-      <Skills />
-      <Projects ref="projectsSectionRef" />
-      <Contact />
+    <div v-if="route.path === '/'" class="homepage-stack relative font-sans">
+      <div class="homepage-slide sticky top-0 h-[100svh] overflow-hidden">
+        <Hero :projectsSectionRef="projectsSectionRef" />
+      </div>
+      <div class="homepage-slide sticky top-0 h-[100svh] overflow-hidden">
+        <Skills />
+      </div>
+      <div class="homepage-slide sticky top-0 h-[100svh] overflow-hidden">
+        <Projects ref="projectsSectionRef" />
+      </div>
+      <div class="homepage-slide sticky top-0 h-[100svh] overflow-hidden">
+        <Contact />
+      </div>
 
       <!-- Back to Top Button -->
       <BackToTop />

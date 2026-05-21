@@ -1,10 +1,10 @@
 <template>
   <section
     id="contact"
-    class="py-16 px-6 text-center bg-[#1a1a1a]"
+    class="min-h-screen py-20 px-6 text-center bg-[#1a1a1a] flex flex-col items-center justify-center"
     :style="{ color: 'var(--text-color)' }"
   >
-    <h2 class="text-3xl font-bold mb-6">Let's Connect 🤝</h2>
+    <h2 class="text-3xl font-bold mb-6">Let's Connect</h2>
     <p class="mb-10 text-gray-400">
       Feel free to reach out - I'm always open to chat or collaborate!
     </p>
