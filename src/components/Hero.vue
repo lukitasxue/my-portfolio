@@ -119,10 +119,7 @@
   
 <script setup>
   import { projects } from '../data/projects.js'
-  import Projects from './Projects.vue'
   import { useRouter } from 'vue-router'
-
-  import { ref, nextTick } from 'vue'
 
   const router = useRouter()
   function scrollToProjects() {
@@ -132,8 +129,11 @@
   const props = defineProps(['projectsSectionRef'])
 
   function feelingLucky() {
-    const projectIds = ['mood-predictor', 'linear-regression'] // Add all proj IDs here
-  const luckyProjectId = projectIds[Math.floor(Math.random() * projectIds.length)]
+    const projectIds = projects.map(project => project.id)
+    const luckyProjectId = projectIds[Math.floor(Math.random() * projectIds.length)]
+
+    if (!luckyProjectId) return
+
     router.push({
       path: `/projects/${luckyProjectId}`,
       query: { lucky: 'true' }

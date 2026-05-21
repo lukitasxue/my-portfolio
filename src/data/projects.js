@@ -14,7 +14,7 @@ export const projects = [
 		id: "mood-predictor",
 		title: "Mood Predictor App",
 		shortTitle: "Mood Predictor",
-		image: "/blog/mood-predictor/mood-predictor-placeholder.svg",
+		image: "/blog/mood-predictor/cover.png",
 		description: "Track lifestyle inputs and predict a daily mood score using a custom NumPy regression model with a dark dashboard UI.",
 		showcase: true
 	},

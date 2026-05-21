@@ -53,7 +53,7 @@
 
       <div class="skedy-cta">
         <a
-          href="https://github.com/lukitasxue/simple_booking"
+          href="https://github.com/mesieou/simple_booking"
           target="_blank"
           rel="noopener"
           class="skedy-link-btn"

@@ -22,24 +22,21 @@
       </div>
     </header>
 
-    <section class="mp-panel mp-screenshot-plan" aria-label="Mood Predictor image placeholders">
-      <div class="mp-placeholder mp-placeholder-large">
-        <span class="mp-placeholder-label">Screenshot placeholder</span>
-        <strong>App dashboard / hero view</strong>
-        <p>Put the replacement image at <code>public/blog/mood-predictor/cover.png</code>.</p>
-      </div>
+    <section class="mp-panel mp-screenshot-plan" aria-label="Mood Predictor screenshots">
+      <figure class="mp-screenshot mp-screenshot-large">
+        <img :src="images.cover" alt="Mood Predictor app dashboard overview" />
+        <figcaption>App dashboard / hero view</figcaption>
+      </figure>
 
-      <div class="mp-placeholder-grid">
-        <div class="mp-placeholder">
-          <span class="mp-placeholder-label">Screenshot placeholder</span>
-          <strong>Input sliders</strong>
-          <p>Use <code>public/blog/mood-predictor/input-flow.png</code>.</p>
-        </div>
-        <div class="mp-placeholder">
-          <span class="mp-placeholder-label">Screenshot placeholder</span>
-          <strong>Charts + history</strong>
-          <p>Use <code>public/blog/mood-predictor/charts-overview.png</code>.</p>
-        </div>
+      <div class="mp-screenshot-grid">
+        <figure class="mp-screenshot">
+          <img :src="images.inputFlow" alt="Mood Predictor input sliders" />
+          <figcaption>Input sliders</figcaption>
+        </figure>
+        <figure class="mp-screenshot">
+          <img :src="images.chartOverview" alt="Mood Predictor charts and history overview" />
+          <figcaption>Charts + history</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -91,7 +88,7 @@
         <aside class="mp-callout">
           <span>Design note</span>
           The blog now follows the app's own color system: near-black panels, lavender actions, warm slider gradients,
-          and teal chart accents. The screenshots are intentionally placeholders until fresh captures are ready.
+          and teal chart accents. The screenshots show the live app flow from daily inputs through the chart dashboard.
         </aside>
       </section>
 
@@ -130,7 +127,12 @@
 <script setup>
 import BackToTop from './BackToTop.vue'
 
-const liveAppUrl = 'https://lucasxueportfolio.netlify.app/projects/mood-predictor'
+const liveAppUrl = 'https://moodpredictorapp.netlify.app'
+const images = {
+  cover: '/blog/mood-predictor/cover.png',
+  inputFlow: '/blog/mood-predictor/input-flow.png',
+  chartOverview: '/blog/mood-predictor/chart-overview.png'
+}
 </script>
 
 <style scoped>
@@ -250,63 +252,39 @@ const liveAppUrl = 'https://lucasxueportfolio.netlify.app/projects/mood-predicto
   background: var(--mp-panel);
 }
 
-.mp-placeholder-grid {
+.mp-screenshot-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.mp-placeholder {
-  min-height: 210px;
-  padding: 1.25rem;
-  border: 1px dashed var(--mp-line);
+.mp-screenshot {
+  margin: 0;
   border-radius: 8px;
-  background:
-    linear-gradient(135deg, rgba(111, 202, 208, 0.08), transparent 34%),
-    var(--mp-panel-soft);
-  position: relative;
+  background: var(--mp-panel-soft);
   overflow: hidden;
 }
 
-.mp-placeholder::after {
-  content: "";
-  position: absolute;
-  left: 1.25rem;
-  right: 1.25rem;
-  bottom: 1.25rem;
-  height: 8px;
-  border-radius: 999px;
-  background: var(--mp-gradient);
-}
-
-.mp-placeholder-large {
-  min-height: 300px;
-}
-
-.mp-placeholder-label {
-  display: inline-flex;
-  margin-bottom: 1rem;
-  padding: 0.25rem 0.55rem;
-  border-radius: 999px;
-  background: rgba(133, 128, 237, 0.14);
-  color: var(--mp-soft-bright);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.72rem;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.mp-placeholder strong {
+.mp-screenshot img {
   display: block;
-  margin-bottom: 0.5rem;
-  font-size: 1.35rem;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
 }
 
-.mp-placeholder p {
-  max-width: 32ch;
+.mp-screenshot-large img {
+  height: auto;
+  max-height: 430px;
+  object-fit: contain;
+  background: #171719;
+}
+
+.mp-screenshot figcaption {
+  padding: 0.75rem 1rem;
   color: var(--mp-muted);
-  line-height: 1.65;
+  font-size: 0.88rem;
+  font-weight: 700;
 }
 
 .mp-article {
@@ -418,7 +396,7 @@ const liveAppUrl = 'https://lucasxueportfolio.netlify.app/projects/mood-predicto
     max-width: none;
   }
 
-  .mp-placeholder-grid,
+  .mp-screenshot-grid,
   .mp-stack-grid {
     grid-template-columns: 1fr;
   }
